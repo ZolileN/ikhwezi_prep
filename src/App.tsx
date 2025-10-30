@@ -11,6 +11,8 @@ import gallery6 from './assets/6.png';
 import gallery7 from './assets/7.png';
 import gallery9 from './assets/9.png';
 import gallery10 from './assets/10.png';
+import BackToTop from './components/BackToTop';
+
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -83,7 +85,7 @@ function App() {
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">Begins & Grows</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Ikwezi Pre & Primary School provides a nurturing environment where children develop academically, socially, and emotionally through innovative teaching and personalized care.
+                Ikhwezi Prep & Primary School provides a nurturing environment where children develop academically, socially, and emotionally through innovative teaching and personalized care.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button
@@ -129,7 +131,7 @@ function App() {
       <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Ikwezi</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Ikhwezi</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A place where every child's potential is recognized, nurtured, and celebrated
             </p>
@@ -457,7 +459,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                "Ikwezi has been wonderful for my daughter. The teachers are caring and dedicated, and I've seen tremendous growth in her confidence and academic skills."
+                "Ikhwezi has been wonderful for my daughter. The teachers are caring and dedicated, and I've seen tremendous growth in her confidence and academic skills."
               </p>
             </div>
 
@@ -537,8 +539,8 @@ function App() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Email Us</h3>
-                  <p className="text-gray-600">info@ikwezischool.co.za</p>
-                  <p className="text-gray-600">admissions@ikwezischool.co.za</p>
+                  <p className="text-gray-600">info@ikhwezischool.co.za</p>
+                  <p className="text-gray-600">admissions@ikhwezischool.co.za</p>
                 </div>
               </div>
 
@@ -554,7 +556,9 @@ function App() {
                     <Instagram className="w-6 h-6" />
                   </a>
                   <a
-                    href="https://www.facebook.com/p/Ikhwezi-Prep-School-100063753112348/"
+                    href="https://www.facebook.com/p/Ikhwezi-Prep-School-100063753112348/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-blue-600 p-3 rounded-xl text-white hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
                   >
                     <Facebook className="w-6 h-6" />
@@ -621,7 +625,7 @@ function App() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Ikhwezi</h3>
-                  <p className="text-xs text-gray-400">Pre & Primary School</p>
+                  <p className="text-xs text-gray-400">Prep & Primary School</p>
                 </div>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed">
@@ -669,11 +673,11 @@ function App() {
 
           <div className="border-t border-gray-800 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2025 Ikhwezi Pre & Primary School. All rights reserved.
-            </p>
+              &copy; 2025 Ikhwezi Prep & Primary School. All rights reserved. Built with ❤️ and modern web technologies by <a href='https://mlkcomputer.com'>MLK Computer Consulting</a></p>
           </div>
         </div>
       </footer>
+      < BackToTop />
     </div>
   );
 }
