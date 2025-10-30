@@ -92,7 +92,7 @@ function App() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
                 <img
-                  src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/src/assets/8.png"
                   alt="Happy students learning"
                   className="w-full h-[500px] object-cover"
                 />
@@ -350,7 +350,7 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="https://images.pexels.com/photos/8422061/pexels-photo-8422061.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/src/assets/1.png"
                 alt="Students learning"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -358,7 +358,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="https://images.pexels.com/photos/8612990/pexels-photo-8612990.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/src/assets/2.png"
                 alt="Classroom activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -366,7 +366,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/src/assets/3.png"
                 alt="Happy students"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -374,7 +374,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="https://images.pexels.com/photos/8422149/pexels-photo-8422149.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/src/assets/4.png"
                 alt="Sports activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -382,7 +382,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="https://images.pexels.com/photos/8422164/pexels-photo-8422164.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/src/assets/5.png"
                 alt="Creative learning"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -390,7 +390,31 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="https://images.pexels.com/photos/8613317/pexels-photo-8613317.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/src/assets/6.png"
+                alt="Group activities"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
+              <img
+                src="/src/assets/7.png"
+                alt="Group activities"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
+              <img
+                src="/src/assets/9.png"
+                alt="Group activities"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
+              <img
+                src="/src/assets/10.png"
                 alt="Group activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -493,7 +517,6 @@ function App() {
                 <div>
                   <h3 className="font-bold text-gray-900 text-lg mb-2">Call Us</h3>
                   <p className="text-gray-600">+27 (0)53 631 0013</p>
-                  <p className="text-gray-600">+27 82 345 6789</p>
                 </div>
               </div>
 
@@ -586,7 +609,7 @@ function App() {
                   <GraduationCap className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg">Ikwezi</h3>
+                  <h3 className="font-bold text-lg">Ikhwezi</h3>
                   <p className="text-xs text-gray-400">Pre & Primary School</p>
                 </div>
               </div>
@@ -635,7 +658,7 @@ function App() {
 
           <div className="border-t border-gray-800 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              &copy; 2024 Ikwezi Pre & Primary School. All rights reserved.
+              &copy; 2025 Ikhwezi Pre & Primary School. All rights reserved.
             </p>
           </div>
         </div>
