@@ -1,5 +1,16 @@
 import { useState } from 'react';
 import { Menu, X, Phone, Mail, MapPin, Facebook, Instagram, GraduationCap, Users, BookOpen, Heart } from 'lucide-react';
+import logo from './assets/logo.png';
+import heroImage from './assets/8.png';
+import gallery1 from './assets/1.png';
+import gallery2 from './assets/2.png';
+import gallery3 from './assets/3.png';
+import gallery4 from './assets/4.png';
+import gallery5 from './assets/5.png';
+import gallery6 from './assets/6.png';
+import gallery7 from './assets/7.png';
+import gallery9 from './assets/9.png';
+import gallery10 from './assets/10.png';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,7 +30,7 @@ function App() {
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <img 
-                src="/src/assets/logo.png" 
+                src={logo}
                 alt="Ikhwezi Pre & Primary School Logo" 
                 className="h-16 w-auto"
               />
@@ -92,7 +103,7 @@ function App() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
                 <img
-                  src="/src/assets/8.png"
+                  src={heroImage}
                   alt="Happy students learning"
                   className="w-full h-[500px] object-cover"
                 />
@@ -350,7 +361,7 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/1.png"
+                src={gallery1}
                 alt="Students learning"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -358,7 +369,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/2.png"
+                src={gallery2}
                 alt="Classroom activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -366,7 +377,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/3.png"
+                src={gallery3}
                 alt="Happy students"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -374,7 +385,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/4.png"
+                src={gallery4}
                 alt="Sports activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -382,7 +393,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/5.png"
+                src={gallery5}
                 alt="Creative learning"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -390,7 +401,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/6.png"
+                src={gallery6}
                 alt="Group activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -398,7 +409,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/7.png"
+                src={gallery7}
                 alt="Group activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -406,7 +417,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/9.png"
+                src={gallery9}
                 alt="Group activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
@@ -414,7 +425,7 @@ function App() {
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg group h-64">
               <img
-                src="/src/assets/10.png"
+                src={gallery10}
                 alt="Group activities"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
