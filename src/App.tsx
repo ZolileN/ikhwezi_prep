@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { Menu, X, Phone, Mail, MapPin, Facebook, Instagram, GraduationCap, Users, BookOpen, Heart } from 'lucide-react';
 import logo from './assets/logo.png';
 import heroImage from './assets/8.png';
@@ -13,7 +13,6 @@ import gallery9 from './assets/9.png';
 import gallery10 from './assets/10.png';
 import BackToTop from './components/BackToTop';
 
-
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,6 +20,45 @@ function App() {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
+  };
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{success: boolean; message: string} | null>(null);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const formData = new FormData(e.currentTarget);
+    formData.append('access_key', 'cdab5cc0-643e-40fc-9652-4189e1698762');
+    formData.append('subject', 'New Contact Form Submission from Ikhwezi Website');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setSubmitStatus({
+          success: true,
+          message: 'Thank you for your message! We will get back to you soon.'
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error(data.message || 'Failed to send message');
+      }
+    } catch {
+      setSubmitStatus({
+        success: false,
+        message: 'There was an error sending your message. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -569,45 +607,64 @@ function App() {
 
             <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Full Name</label>
+                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Full Name</label>
                   <input
+                    id="name"
+                    name="name"
                     type="text"
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Email Address</label>
+                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address</label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     placeholder="your.email@example.com"
+                    required
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Phone Number</label>
+                  <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Phone Number</label>
                   <input
+                    id="phone"
+                    name="phone"
                     type="tel"
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
                     placeholder="+27 xx xxx xxxx"
                   />
                 </div>
                 <div>
-                  <label className="block text-gray-700 font-medium mb-2">Message</label>
+                  <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
                   <textarea
+                    id="message"
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all resize-none"
                     placeholder="Tell us about your child and how we can help..."
+                    required
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-                >
-                  Send Message
-                </button>
+                <div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={`w-full py-4 px-6 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </button>
+                </div>
+                {submitStatus && (
+                  <div className={`p-4 rounded-xl ${submitStatus.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+                    {submitStatus.message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
@@ -677,7 +734,7 @@ function App() {
           </div>
         </div>
       </footer>
-      < BackToTop />
+      <BackToTop />
     </div>
   );
 }
